@@ -1,0 +1,11 @@
+limit_physics_monoids:speed_limiter () enum tanh gamma,tanh,log__n
+limit_physics_monoids:speed_param_1 () float 1
+limit_physics_monoids:speed_param_2 () float 0
+
+limit_physics_monoids:jump_limiter () enum tanh gamma,tanh,log__n
+limit_physics_monoids:jump_param_1 () float 1
+limit_physics_monoids:jump_param_2 () float 0
+
+limit_physics_monoids:gravity_limiter () enum tanh gamma,tanh,log__n
+limit_physics_monoids:gravity_param_1 () float 1
+limit_physics_monoids:gravity_param_2 () float 0
