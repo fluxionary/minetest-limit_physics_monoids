@@ -15,7 +15,7 @@ local limiters = {
 		return (tanh((x - 1) / param_1) - tanh(-1 / param_1)) / -tanh(-1 / param_1)
 	end,
 	log__n = function(x, param_1, param_2)
-		return (log(x + 1) * pow(log(param_1 * x), param_2) / (log(2) * pow(log(param_1), param_2)))
+		return (log(x + 1) * pow(log(param_1 * x + 1), param_2) / (log(2) * pow(log(param_1 + 1), param_2)))
 	end,
 }
 
