@@ -8,6 +8,9 @@ local tanh = math.tanh
 
 ]]
 local limiters = {
+	none = function(x)
+		return x
+	end,
 	gamma = function(x, param_1)
 		return pow(x, param_1)
 	end,
