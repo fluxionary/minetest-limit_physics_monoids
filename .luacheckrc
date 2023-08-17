@@ -652,5 +652,6 @@ stds.limit_physics_monoids = {
 	},
 	read_globals = {
 		"fmod",
+		"futil",
 	},
 }

@@ -1,8 +1,6 @@
-limit_physics_monoids = fmod.create()
+futil.check_version({ year = 2023, month = 8, day = 17 }) -- limiters now here
 
-local log = math.log
-local pow = math.pow
-local tanh = math.tanh
+limit_physics_monoids = fmod.create()
 
 local folders = {
 	add = function(t, x)
@@ -25,38 +23,23 @@ local folders = {
 	end,
 }
 
-local limiters = {
-	none = function(x)
-		return x
-	end,
-	gamma = function(x, param_1)
-		return pow(x, param_1)
-	end,
-	tanh = function(x, param_1)
-		return (tanh((x - 1) / param_1) - tanh(-1 / param_1)) / -tanh(-1 / param_1)
-	end,
-	log__n = function(x, param_1, param_2)
-		return (log(x + 1) * pow(log(param_1 * x + 1), param_2) / (log(2) * pow(log(param_1 + 1), param_2)))
-	end,
-}
-
 local s = limit_physics_monoids.settings
 
-local speed_folder = folders[s.speed_folder]
+local speed_folder = assert(folders[s.speed_folder], "unknown folder " .. s.speed_folder)
 local speed_folder_initial = s.speed_folder_initial
-local speed_limiter = limiters[s.speed_limiter]
+local speed_limiter = assert(futil.limiters[s.speed_limiter], "unknown limiter " .. s.speed_limiter)
 local speed_param_1 = s.speed_param_1
 local speed_param_2 = s.speed_param_2
 
-local jump_folder = folders[s.jump_folder]
+local jump_folder = assert(folders[s.jump_folder], "unknown folder " .. s.jump_folder)
 local jump_folder_initial = s.jump_folder_initial
-local jump_limiter = limiters[s.jump_limiter]
+local jump_limiter = assert(futil.limiters[s.jump_limiter], "unknown limiter " .. s.jump_limiter)
 local jump_param_1 = s.jump_param_1
 local jump_param_2 = s.jump_param_2
 
-local gravity_folder = folders[s.gravity_folder]
+local gravity_folder = assert(folders[s.gravity_folder], "unknown folder " .. s.gravity_folder)
 local gravity_folder_initial = s.gravity_folder_initial
-local gravity_limiter = limiters[s.gravity_limiter]
+local gravity_limiter = assert(futil.limiters[s.gravity_limiter], "unknown limiter " .. s.gravity_limiter)
 local gravity_param_1 = s.gravity_param_1
 local gravity_param_2 = s.gravity_param_2
 
