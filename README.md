@@ -32,7 +32,7 @@ properties of a limiter:
 
   no change should remain no change.
 
-* f\'(x) differentiable, decreasing when x > 1
+* f\'(x) is nonincreasing when x > 1 (when the parameters are appropriate)
 
   it should decrease smoothly.
 
