@@ -1,20 +1,20 @@
 [speed]
-limit_physics_monoids:speed_folder (speed folder) enum multiply add,max,multiply
-limit_physics_monoids:speed_folder_initial (speed folder initial value) float 1
-limit_physics_monoids:speed_limiter (speed limiter) enum log__n none,gamma,tanh,log__n
-limit_physics_monoids:speed_param_1 (speed limiter parameter 1) float 2
-limit_physics_monoids:speed_param_2 (speed limiter parameter 2) float 0.1
+limit_physics_monoids.speed_folder (speed folder) enum multiply add,max,multiply
+limit_physics_monoids.speed_folder_initial (speed folder initial value) float 1
+limit_physics_monoids.speed_limiter (speed limiter) enum log__n none,gamma,tanh,log__n
+limit_physics_monoids.speed_param_1 (speed limiter parameter 1) float 2
+limit_physics_monoids.speed_param_2 (speed limiter parameter 2) float 0.1
 
 [jump]
-limit_physics_monoids:jump_folder (jump folder) enum multiply add,max,multiply
-limit_physics_monoids:jump_folder_initial (jump folder initial value) float 1
-limit_physics_monoids:jump_limiter (jump limiter) enum tanh none,gamma,tanh,log__n
-limit_physics_monoids:jump_param_1 (jump limiter parameter 1) float 1
-limit_physics_monoids:jump_param_2 (jump limiter parameter 2) float 0
+limit_physics_monoids.jump_folder (jump folder) enum multiply add,max,multiply
+limit_physics_monoids.jump_folder_initial (jump folder initial value) float 1
+limit_physics_monoids.jump_limiter (jump limiter) enum tanh none,gamma,tanh,log__n
+limit_physics_monoids.jump_param_1 (jump limiter parameter 1) float 1
+limit_physics_monoids.jump_param_2 (jump limiter parameter 2) float 0
 
 [gravity]
-limit_physics_monoids:gravity_folder (gravity folder) enum multiply add,max,multiply
-limit_physics_monoids:gravity_folder_initial (gravity folder initial value) float 1
-limit_physics_monoids:gravity_limiter (gravity limiter) enum none none,gamma,tanh,log__n
-limit_physics_monoids:gravity_param_1 (gravity limiter parameter 1) float 1
-limit_physics_monoids:gravity_param_2 (gravity limiter parameter 2) float 0
+limit_physics_monoids.gravity_folder (gravity folder) enum multiply add,max,multiply
+limit_physics_monoids.gravity_folder_initial (gravity folder initial value) float 1
+limit_physics_monoids.gravity_limiter (gravity limiter) enum none none,gamma,tanh,log__n
+limit_physics_monoids.gravity_param_1 (gravity limiter parameter 1) float 1
+limit_physics_monoids.gravity_param_2 (gravity limiter parameter 2) float 0
